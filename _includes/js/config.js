@@ -1,5 +1,5 @@
 /*
-This is the fil in which you configure the data widgets. Feel free to experiment with the configuration options. 
+This is the file in which you configure the data widgets. Feel free to experiment with the configuration options. 
 But it is also completely okay to write and issue and ask for help to configure the widgets.
 You probably want to check out the documentation at https://hp-theme.gbif-staging.org/documentation-intro
 */
@@ -94,9 +94,7 @@ var siteConfig = {
       "type": "in",
       "key": "publishingOrg",
       "values": [
-        "760d5f24-4c04-40da-9646-1b2c935da502",
-        "2e7df380-8356-4533-bcb3-5459e23c794e",
-        "8e1a97a0-3ca8-11d9-8439-b8a03c50a862"
+        "75642970-f855-11dd-8235-b8a03c50a862" // limiting to data only published by MNHNL
       ]
     },
     "highlightedFilters": [
@@ -136,9 +134,9 @@ var siteConfig = {
       "download"
     ],
     "mapSettings": {
-      "lat": 52,
-      "lng": 12,
-      "zoom": 4.911544076366507
+      "lat": 49.8153,
+      "lng": 6.1296,
+      "zoom": 7.5
     }
   },
   "collectionSearch": {
