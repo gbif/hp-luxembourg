@@ -99,7 +99,7 @@ var siteConfig = {
             {
               "type": "equals",
               "key": "publishingOrg",
-              "value": [
+              "values": [
                 "75642970-f855-11dd-8235-b8a03c50a862",
                 "e2e717bf-551a-4917-bdc9-4fa0f342c530",
                 "c8d737e0-2ff8-42e8-b8fc-6b805d26fc5f"
