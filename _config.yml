@@ -35,10 +35,10 @@ github_username:  yourname # if you have an account you want to link to. Else co
 bluesky_username: yourname.org                            # Social icon in footer
 youtube_username: yourname                              # Social icon in footer
 facebook_username: yourname                             # Social icon in footer
-flickr_username: yourname                               # Social icon in footer
-instagram_username: yourname                              # Social icon in footer
+#flickr_username: yourname                               # Social icon in footer
+instagram_username: naturmusee                              # Social icon in footer
 mastodon_url: https://something.goes/@here                # Social icon in footer
-linkedin_url: https://www.linkedin.com/company/yourname # Social icon in footer
+linkedin_url: https://www.linkedin.com/company/naturmusee # Social icon in footer
 
 # Build settings
 theme: minima
