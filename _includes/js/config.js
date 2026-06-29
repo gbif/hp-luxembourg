@@ -108,12 +108,15 @@ var siteConfig = {
     },
     "highlightedFilters": [
       // "taxonKey",
+      "fullTextSearch",
       "verbatimScientificName",
       "institutionKey",
       // "collectionKey",
       // "catalogNumber",
       "recordedBy",
-      "identifiedBy"
+      "identifiedBy",
+      "dataset",
+      "administrativeArea"
     ],
     "excludedFilters": [
       "networkKey",
