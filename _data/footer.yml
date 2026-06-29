@@ -23,9 +23,9 @@ columns:
   - name: Contact
     description: | # Can be Markdown
       Social icons links defined in `_config.yml`
-      * Street name
-      * 1234 postal code
-      * Country
+      * 25 Rue Münster
+      * L-2160
+      * Luxembourg
     connectIcons: true # Show social icons (defined in _config.yml)
 
 
