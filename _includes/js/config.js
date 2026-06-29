@@ -39,7 +39,7 @@ var siteConfig = {
     // TODO: you should remove types you do not want to use
     "OCCURRENCE",
     "DATASET",
-    // "COLLECTION",
+    "COLLECTION",
     // "INSTITUTION",
     "LITERATURE"
   ],
