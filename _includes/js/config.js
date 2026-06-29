@@ -131,15 +131,17 @@ var siteConfig = {
       // "catalogNumber",
       // "country",
       "year",
+      "SamplingProtocol",
       "recordedBy",
       "identifiedBy",
-      "publisher"
+      "publisher",
+      "lastInterpreted"
     ],
     "tabs": [
       "table",
       "gallery",
       "map",
-      "clusters",
+      // "clusters",
       "dashboard",
       "download"
     ],
