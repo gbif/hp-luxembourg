@@ -39,8 +39,8 @@ var siteConfig = {
     // TODO: you should remove types you do not want to use
     "OCCURRENCE",
     "DATASET",
-    "COLLECTION",
-    "INSTITUTION",
+    // "COLLECTION",
+    // "INSTITUTION",
     "LITERATURE"
   ],
   "dataHeader": {
@@ -107,32 +107,30 @@ var siteConfig = {
       ]
     },
     "highlightedFilters": [
-      "taxonKey",
+      // "taxonKey",
       "verbatimScientificName",
       "institutionKey",
-      "collectionKey",
-      "catalogNumber",
+      // "collectionKey",
+      // "catalogNumber",
       "recordedBy",
       "identifiedBy"
     ],
     "excludedFilters": [
-      "occurrenceStatus",
       "networkKey",
-      "hostingOrganizationKey",
-      "protocol",
-      "publishingCountry",
-      "institutionCode",
-      "collectionCode"
+      "hostingOrganizationKey"
     ],
     "defaultEnabledTableColumns": [
+      "family",
       "features",
-      "institutionKey",
-      "collectionKey",
-      "catalogNumber",
-      "country",
+      "eventDate",
+      // "institutionKey",
+      // "collectionKey",
+      // "catalogNumber",
+      // "country",
       "year",
       "recordedBy",
-      "identifiedBy"
+      "identifiedBy",
+      "publisher"
     ],
     "tabs": [
       "table",
