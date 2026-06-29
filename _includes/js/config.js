@@ -91,10 +91,19 @@ var siteConfig = {
   "messages": {},
   "occurrenceSearch": {
     "scope": {
-      "type": "in",
-      "key": "publishingOrg",
-      "values": [
-        "75642970-f855-11dd-8235-b8a03c50a862" // limiting to data only published by MNHNL
+      "type": "and",
+      "predicates": [
+        {
+          "type": "in",
+          "key": "publishingOrg",
+          "values": [
+            "75642970-f855-11dd-8235-b8a03c50a862"
+          ]
+        },
+        {
+          "type": "within",
+          "geometry": "POLYGON((5.4 50.3, 7.2 50.3, 7.2 49.3, 5.4 49.3, 5.4 50.3))"
+        }
       ]
     },
     "highlightedFilters": [
