@@ -157,9 +157,9 @@ var siteConfig = {
       "year",
       "samplingProtocol",
       "recordedBy",
-      "identifiedBy",f
+      "identifiedBy",
       "datasetName",
-      // "publisher",
+      "publisher",
       "lastInterpreted"
     ],
     "tabs": [
