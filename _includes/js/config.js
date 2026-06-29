@@ -173,8 +173,7 @@ var siteConfig = {
       "lat": 49.8153,
       "lng": 6.1296,
       "zoom": 7.5
-    }
-  },
+    },
   "collectionSearch": {
     excludedFilters: ['country', 'active'],
     // highlightedFilters: ['q', 'type', 'publishingOrg', 'license'],
