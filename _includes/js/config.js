@@ -93,16 +93,9 @@ var siteConfig = {
     "scope": {
       "type": "and",
       "predicates": [
-        //{
-        //  "type": "in",
-        //  "key": "publishingOrg",
-        //  "values": [
-        //    "75642970-f855-11dd-8235-b8a03c50a862"
-        //  ]
-        //},
         {
           "type": "in",
-          "key": "publishingOrganizationKey",
+          "key": "publishingOrg",
           "values": [
             "75642970-f855-11dd-8235-b8a03c50a862",
             "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
