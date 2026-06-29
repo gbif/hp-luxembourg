@@ -159,7 +159,6 @@ var siteConfig = {
       "recordedBy",
       "identifiedBy",
       "datasetName",
-      "publisher",
       "lastInterpreted"
     ],
     "tabs": [
