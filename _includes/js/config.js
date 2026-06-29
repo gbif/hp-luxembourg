@@ -125,7 +125,7 @@ var siteConfig = {
       // "catalogNumber",
       // "recordedBy",
       // "identifiedBy",
-      "dataset",
+      "datasetName",
       "administrativeArea"
     ],
     "excludedFilters": [
@@ -140,8 +140,8 @@ var siteConfig = {
       // "collectionKey",
       // "catalogNumber",
       // "country",
+      "basisOfRecord",
       "samplingProtocol",
-      "administrativeArea",
       "recordedBy",
       "identifiedBy",
       "publisher",
