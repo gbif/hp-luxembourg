@@ -120,7 +120,7 @@ var siteConfig = {
             "type": "in",
             "key": "datasetKey",
             "values": [
-              "2814930a-3b93-48d6-b887-00979481ac9e" // MNHNL palaeo
+              "2814930a-3b93-48d6-b887-00979481ac9e"
             ]
           }
         },
@@ -135,7 +135,7 @@ var siteConfig = {
       // "taxonKey",
       "q",
       // "verbatimScientificName",
-      "publisher",
+      "publishingOrg",
       // "collectionKey",
       // "catalogNumber",
       "recordedBy",
@@ -155,9 +155,9 @@ var siteConfig = {
       // "catalogNumber",
       // "country",
       "year",
-      "SamplingProtocol",
+      "samplingProtocol",
       "recordedBy",
-      "identifiedBy",
+      "identifiedBy",f
       "datasetName",
       "publisher",
       "lastInterpreted"
