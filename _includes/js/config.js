@@ -93,34 +93,49 @@ var siteConfig = {
     "scope": {
       "type": "and",
       "predicates": [
-        //{
-        //  "type": "in",
-        //  "key": "publishingOrg",
-        //  "values": [
-        //    "75642970-f855-11dd-8235-b8a03c50a862"
-        //  ]
-        //},
         {
-          "type": "in",
-          "key": "datasetKey",
-          "values": [
-            "962f59bc-f762-11e1-a439-00145eb45e9a",
-            "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
-            "d70c169f-fd9e-4355-8431-8d1fba91370f",
-            "4fa7b334-ce0d-4e88-aaae-2e0c138d049e"
+          "type": "or",
+          "predicates": [
+            {
+              "type": "equals",
+              "key": "publishingOrg",
+              "value": [
+                "75642970-f855-11dd-8235-b8a03c50a862",
+                "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+                "c8d737e0-2ff8-42e8-b8fc-6b805d26fc5f",
+              ]  
+            },
+            {
+              "type": "in",
+              "key": "datasetKey",
+              "values": [
+                "a621b3ba-8415-41f2-a4af-7ec9511ae868"
+              ]
+            }
           ]
+        },
+        {
+          "type": "not",
+          "predicate": {
+            "type": "in",
+            "key": "datasetKey",
+            "values": [
+              "2814930a-3b93-48d6-b887-00979481ac9e" // MNHNL palaeo
+            ]
+          }
         },
         {
           "type": "within",
           "geometry": "POLYGON((6.18869 50.17408, 6.07922 50.19745, 5.98539 50.20412, 5.86029 50.12398, 5.78209 50.02528, 5.70912 49.91129, 5.74039 49.78187, 5.85507 49.66561, 5.80295 49.59301, 5.77688 49.50847, 5.96715 49.42377, 6.11571 49.42377, 6.23039 49.48477, 6.40242 49.43903, 6.55359 49.68922, 6.56662 49.80879, 6.25646 49.95491, 6.18869 50.17408))"
         }
       ]
-    },
+    }
+  },
     "highlightedFilters": [
       // "taxonKey",
-      "fullTextSearch",
-      "verbatimScientificName",
-      "institutionKey",
+      "q",
+      // "verbatimScientificName",
+      "publisher",
       // "collectionKey",
       // "catalogNumber",
       "recordedBy",
@@ -133,7 +148,6 @@ var siteConfig = {
       "hostingOrganizationKey"
     ],
     "defaultEnabledTableColumns": [
-      "family",
       "features",
       "eventDate",
       // "institutionKey",
@@ -144,6 +158,7 @@ var siteConfig = {
       "SamplingProtocol",
       "recordedBy",
       "identifiedBy",
+      "datasetName",
       "publisher",
       "lastInterpreted"
     ],
