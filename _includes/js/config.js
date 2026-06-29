@@ -102,12 +102,11 @@ var siteConfig = {
         //},
         {
           "type": "in",
-          "key": "datasetKey",
+          "key": "publishingOrganizationKey",
           "values": [
-            "962f59bc-f762-11e1-a439-00145eb45e9a",
-            "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
-            "d70c169f-fd9e-4355-8431-8d1fba91370f",
-            "4fa7b334-ce0d-4e88-aaae-2e0c138d049e"
+            "75642970-f855-11dd-8235-b8a03c50a862",
+            "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+            "e2e717bf-551a-4917-bdc9-4fa0f342c530"
           ]
         },
         {
