@@ -99,7 +99,12 @@ var siteConfig = {
           "values": [
             "75642970-f855-11dd-8235-b8a03c50a862",
             "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
-            "e2e717bf-551a-4917-bdc9-4fa0f342c530"
+            "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+            "c8d737e0-2ff8-42e8-b8fc-6b805d26fc5f",
+            "b872b075-9ab5-4e27-b6c6-5add6b890379",
+            "a344ee9f-f1b7-4761-be2c-58ee6d741395",
+            "bb646dff-a905-4403-a49b-6d378c2cf0d9",
+            "396d5f30-dea9-11db-8ab4-b8a03c50a862"
           ]
         },
         {
