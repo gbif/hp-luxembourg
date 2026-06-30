@@ -184,7 +184,8 @@ var siteConfig = {
     scope: {
       // TODO: you should add a scope here if you need search to be limited to a subset
       // search filters have the format {field: [values]}
-      type: ['OCCURRENCE', 'CHECKLIST']
+      type: ['CHECKLIST'], // 'OCCURRENCE', 
+      publishingOrg: ['75642970-f855-11dd-8235-b8a03c50a862']
     },
   },
   "publisherSearch": {},
