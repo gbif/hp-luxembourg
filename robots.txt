@@ -1,20 +1,16 @@
+# Block access to beta site, although allow link previews in social media, messaging apps etc.
+
 User-agent: *
-Disallow: /occurrence/
-Disallow: /*/occurrence/
-Disallow: /species/
-Disallow: /*/species/
-Disallow: /dataset/
-Disallow: /*/dataset/
-Disallow: /publisher/
-Disallow: /*/publisher/
-Disallow: /literature/
-Disallow: /*/literature/
+Disallow: /
 
-Disallow: /institution/
-Disallow: /collection/
-Disallow: /*/institution/
-Disallow: /*/collection/
-Disallow: /data
-Disallow: /*/data
+User-agent: Discordbot
+User-agent: LinkedInBot
+User-agent: Pinterestbot
+User-agent: Slackbot
+User-agent: Snapchat
+User-agent: TelegramBot
+User-agent: Twitterbot
+User-agent: WhatsApp
+User-agent: facebookexternalhit
+Disallow:
 
-crawl-delay: 0.1
