@@ -4,8 +4,20 @@ title: Quercus robur — Pedunculate Oak
 description: English oak / Stieleiche / Chêne pédonculé
 toc: true
 ---
+images:
+  - url: "https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg"
+    caption: "Quercus robur — leaves and acorns"
+
+  - url: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Abies_procera_cone.jpg"
+    caption: "Abies procera — cone"
+
+  - url: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tanne2009.jpg"
+    caption: "Abies nordmanniana"
+---
 
 # *Quercus robur*
+
+{% include blocks/imageCarousel.html images=page.images %}
 
 **English oak · Pedunculate oak**  
 **Stieleiche** · **Chêne pédonculé**
