@@ -1,0 +1,169 @@
+<div class="plant-carousel" data-carousel>
+
+  <div class="plant-carousel__slides">
+
+    <div class="plant-carousel__slide active">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg"
+        alt="Quercus robur leaves and acorns">
+    </div>
+
+    <div class="plant-carousel__slide">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Abies_procera_cone.jpg"
+        alt="Fir cone">
+    </div>
+
+    <div class="plant-carousel__slide">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/0/09/Tanne2009.jpg"
+        alt="Fir tree">
+    </div>
+
+  </div>
+
+  <button class="plant-carousel__button plant-carousel__button--prev"
+          type="button"
+          aria-label="Previous image">
+    ‹
+  </button>
+
+  <button class="plant-carousel__button plant-carousel__button--next"
+          type="button"
+          aria-label="Next image">
+    ›
+  </button>
+
+  <div class="plant-carousel__dots"></div>
+
+</div>
+
+<style>
+.plant-carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.plant-carousel__slides {
+  position: relative;
+}
+
+.plant-carousel__slide {
+  display: none;
+}
+
+.plant-carousel__slide.active {
+  display: block;
+}
+
+.plant-carousel__slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.plant-carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 2rem;
+  width: 45px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.plant-carousel__button:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.plant-carousel__button--prev {
+  left: 10px;
+}
+
+.plant-carousel__button--next {
+  right: 10px;
+}
+
+.plant-carousel__dots {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.plant-carousel__dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #bbb;
+  cursor: pointer;
+}
+
+.plant-carousel__dot.active {
+  background: #333;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
+
+    const slides = carousel.querySelectorAll(".plant-carousel__slide");
+    const dotsContainer = carousel.querySelector(".plant-carousel__dots");
+    const previous = carousel.querySelector(".plant-carousel__button--prev");
+    const next = carousel.querySelector(".plant-carousel__button--next");
+
+    let current = 0;
+
+    slides.forEach(function (_, index) {
+      const dot = document.createElement("span");
+
+      dot.className = "plant-carousel__dot";
+      if (index === 0) {
+        dot.classList.add("active");
+      }
+
+      dot.addEventListener("click", function () {
+        showSlide(index);
+      });
+
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll(".plant-carousel__dot");
+
+    function showSlide(index) {
+
+      current = (index + slides.length) % slides.length;
+
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle("active", i === current);
+      });
+
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("active", i === current);
+      });
+    }
+
+    previous.addEventListener("click", function () {
+      showSlide(current - 1);
+    });
+
+    next.addEventListener("click", function () {
+      showSlide(current + 1);
+    });
+
+  });
+
+});
+</script>
