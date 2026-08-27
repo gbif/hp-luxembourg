@@ -10,7 +10,16 @@ toc: true
 **English oak · Pedunculate oak**  
 **Stieleiche** · **Chêne pédonculé**
 
+<details>
+<summary><strong>Taxonomic classification collabsable</strong></summary>
 
+- Kingdom: Plantae
+- Order: Fagales
+- Family: Fagaceae
+- Genus: *Quercus*
+- Species: *Quercus robur*
+
+</details>
 
 ## Overview
 
@@ -122,16 +131,7 @@ Look for the combination of:
 The **short leaf stalk + long acorn stalk** combination is particularly useful when distinguishing *Quercus robur* from other European oaks.
 
 
-<details>
-<summary><strong>Taxonomic classification</strong></summary>
 
-- Kingdom: Plantae
-- Order: Fagales
-- Family: Fagaceae
-- Genus: *Quercus*
-- Species: *Quercus robur*
-
-</details>
 
 
 ## Image
