@@ -21,7 +21,7 @@ images:
 **English oak · Pedunculate oak**  
 **Stieleiche** · **Chêne pédonculé**
 
-![Quercus robur — leaves and acorns](https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg)
+
 
 ## Overview
 
@@ -63,7 +63,7 @@ Male and female flowers occur on the same tree. The male flowers form hanging ca
 Flowering takes place in spring, around the time the new leaves emerge.
 
 ### 🌰 Acorns
-
+![Quercus robur — leaves and acorns](https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg)
 The fruit is the familiar acorn. A particularly useful identification feature is that the acorns are carried on **long stalks (peduncles)** — hence the name "pedunculate oak".
 
 Acorns mature in autumn and provide an important food source for birds and mammals.
