@@ -18,13 +18,19 @@ toc: true
 
 It is native to much of Europe and occurs in forests, woodland edges, hedgerows, parks and river valleys. Old oak trees are particularly valuable for biodiversity, providing food and habitat for insects, fungi, birds and mammals.
 
-## Common names
+## Tables
 
-| Language | Name |
+| Feature | Quercus robur |
 |---|---|
-| English | English oak; Pedunculate oak; Common oak |
-| German | Stieleiche |
-| French | Chêne pédonculé |
+| Common name | English oak |
+| German name | Stieleiche |
+| French name | Chêne pédonculé |
+| Family | Fagaceae |
+| Growth form | Large deciduous tree |
+| Leaf | Deeply lobed |
+| Acorn stalk | Long |
+| Leaf stalk | Very short |
+| Habitat | Forests, hedgerows, parks |
 
 **Family:** Fagaceae  
 **Growth form:** Large deciduous tree
