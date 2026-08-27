@@ -18,6 +18,11 @@ toc: true
 
 It is native to much of Europe and occurs in forests, woodland edges, hedgerows, parks and river valleys. Old oak trees are particularly valuable for biodiversity, providing food and habitat for insects, fungi, birds and mammals.
 
+*Quercus robur* is native to much of Europe.[^1]
+
+[^1]: See the [Kew Plants of the World Online](https://powo.science.kew.org/) entry for *Quercus robur*.
+
+
 ## Tables
 
 | Feature | Quercus robur |
@@ -34,7 +39,7 @@ It is native to much of Europe and occurs in forests, woodland edges, hedgerows,
 
 **Family:** Fagaceae  
 **Growth form:** Large deciduous tree
-
+---
 ## Characteristics
 
 ### 🌳 Tree and crown
@@ -68,6 +73,7 @@ Acorns mature in autumn and provide an important food source for birds and mamma
 
 The buds are relatively small and occur around the ends of the twigs. Their appearance, together with the branching pattern and bark, can help identify the tree during winter when there are no leaves.
 
+---
 ## Habitat and distribution
 
 *Quercus robur* is native to much of Europe and extends into western Asia.
@@ -98,6 +104,9 @@ Old oak trees support an exceptionally rich community of organisms. Their leaves
 
 Because oaks can live for centuries, a single old tree can develop many different habitats throughout its lifetime.
 
+> **Identification tip:** The combination of very short leaf stalks
+> and long-stalked acorns is characteristic of *Quercus robur*.
+
 ## Identification summary
 
 Look for the combination of:
@@ -111,6 +120,19 @@ Look for the combination of:
 - Acorns on **long stalks**
 
 The **short leaf stalk + long acorn stalk** combination is particularly useful when distinguishing *Quercus robur* from other European oaks.
+
+
+<details>
+<summary><strong>Taxonomic classification</strong></summary>
+
+- Kingdom: Plantae
+- Order: Fagales
+- Family: Fagaceae
+- Genus: *Quercus*
+- Species: *Quercus robur*
+
+</details>
+
 
 ## Image
 
