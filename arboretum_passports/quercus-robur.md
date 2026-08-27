@@ -7,8 +7,6 @@ toc: true
 
 # *Quercus robur*
 
-{% include blocks/imageCarousel.html images=page.images %}
-
 **English oak · Pedunculate oak**  
 **Stieleiche** · **Chêne pédonculé**
 
