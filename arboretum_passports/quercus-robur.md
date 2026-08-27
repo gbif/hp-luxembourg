@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quercus robur — Pedunculate Oak
+title: *Quercus robur* — Pedunculate Oak
 description: English oak / Stieleiche / Chêne pédonculé
 toc: true
 ---
