@@ -1,44 +1,53 @@
+```html
 <div class="plant-carousel" data-carousel>
 
   <div class="plant-carousel__slides">
 
-    <div class="plant-carousel__slide active">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg"
-        alt="Quercus robur leaves and acorns">
-    </div>
+    {% for image in include.images %}
 
-    <div class="plant-carousel__slide">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Abies_procera_cone.jpg"
-        alt="Fir cone">
-    </div>
+      <div class="plant-carousel__slide {% if forloop.first %}active{% endif %}">
 
-    <div class="plant-carousel__slide">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/0/09/Tanne2009.jpg"
-        alt="Fir tree">
-    </div>
+        <img
+          src="{{ image.url }}"
+          alt="{{ image.caption | default: 'Plant photograph' }}"
+        >
+
+        {% if image.caption %}
+          <div class="plant-carousel__caption">
+            {{ image.caption }}
+          </div>
+        {% endif %}
+
+      </div>
+
+    {% endfor %}
 
   </div>
 
-  <button class="plant-carousel__button plant-carousel__button--prev"
-          type="button"
-          aria-label="Previous image">
+
+  <button
+    class="plant-carousel__button plant-carousel__button--prev"
+    type="button"
+    aria-label="Previous image">
     ‹
   </button>
 
-  <button class="plant-carousel__button plant-carousel__button--next"
-          type="button"
-          aria-label="Next image">
+
+  <button
+    class="plant-carousel__button plant-carousel__button--next"
+    type="button"
+    aria-label="Next image">
     ›
   </button>
+
 
   <div class="plant-carousel__dots"></div>
 
 </div>
 
+
 <style>
+
 .plant-carousel {
   position: relative;
   max-width: 900px;
@@ -52,6 +61,7 @@
 
 .plant-carousel__slide {
   display: none;
+  text-align: center;
 }
 
 .plant-carousel__slide.active {
@@ -67,16 +77,25 @@
   margin: 0 auto;
 }
 
+.plant-carousel__caption {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 .plant-carousel__button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+
   border: none;
   background: rgba(0, 0, 0, 0.55);
   color: white;
+
   font-size: 2rem;
   width: 45px;
   height: 60px;
+
   cursor: pointer;
   z-index: 2;
 }
@@ -100,35 +119,55 @@
 
 .plant-carousel__dot {
   display: inline-block;
+
   width: 10px;
   height: 10px;
+
   margin: 0 5px;
+
   border-radius: 50%;
+
   background: #bbb;
+
   cursor: pointer;
 }
 
 .plant-carousel__dot.active {
   background: #333;
 }
+
 </style>
 
+
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
 
-    const slides = carousel.querySelectorAll(".plant-carousel__slide");
-    const dotsContainer = carousel.querySelector(".plant-carousel__dots");
-    const previous = carousel.querySelector(".plant-carousel__button--prev");
-    const next = carousel.querySelector(".plant-carousel__button--next");
+    const slides =
+      carousel.querySelectorAll(".plant-carousel__slide");
+
+    const dotsContainer =
+      carousel.querySelector(".plant-carousel__dots");
+
+    const previous =
+      carousel.querySelector(".plant-carousel__button--prev");
+
+    const next =
+      carousel.querySelector(".plant-carousel__button--next");
 
     let current = 0;
 
+
+    /* Create navigation dots */
+
     slides.forEach(function (_, index) {
+
       const dot = document.createElement("span");
 
       dot.className = "plant-carousel__dot";
+
       if (index === 0) {
         dot.classList.add("active");
       }
@@ -138,26 +177,50 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       dotsContainer.appendChild(dot);
+
     });
 
-    const dots = dotsContainer.querySelectorAll(".plant-carousel__dot");
+
+    const dots =
+      dotsContainer.querySelectorAll(".plant-carousel__dot");
+
+
+    /* Display selected slide */
 
     function showSlide(index) {
 
-      current = (index + slides.length) % slides.length;
+      current =
+        (index + slides.length) % slides.length;
 
       slides.forEach(function (slide, i) {
-        slide.classList.toggle("active", i === current);
+
+        slide.classList.toggle(
+          "active",
+          i === current
+        );
+
       });
 
       dots.forEach(function (dot, i) {
-        dot.classList.toggle("active", i === current);
+
+        dot.classList.toggle(
+          "active",
+          i === current
+        );
+
       });
+
     }
+
+
+    /* Previous image */
 
     previous.addEventListener("click", function () {
       showSlide(current - 1);
     });
+
+
+    /* Next image */
 
     next.addEventListener("click", function () {
       showSlide(current + 1);
@@ -166,4 +229,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
 </script>
+```
