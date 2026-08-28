@@ -1,141 +1,306 @@
-/* Reset and Base Styles */
-body {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: #001C26; /* bleu-noir profond (primary text color) */
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
+/*
+
+* MNHNL Arboretum Species Passports
+*
+* Scoped styles for species passport content.
+* These selectors intentionally use .passport so that the
+* GBIF Hosted Portal's global styling is not unintentionally changed.
+  */
+
+/* ---------------------------------------------------------
+Passport container
+--------------------------------------------------------- */
+
+.passport {
+max-width: 800px;
+margin: 0 auto;
+padding: 2rem 2rem 3rem;
+color: #001C26;
+background: #ffffff;
+font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+line-height: 1.65;
+box-sizing: border-box;
 }
 
-/* Hide GBIF Portal Navigation and Footers */
-.gbif-header,
-.gbif-footer,
-.gbif-sidebar,
-.breadcrumb {
-    display: none !important;
+.passport *,
+.passport *::before,
+.passport *::after {
+box-sizing: border-box;
 }
 
-/* Container and Layout */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-left: 4px solid #99CC99; /* vert clair (accent) */
+/* ---------------------------------------------------------
+Introduction
+--------------------------------------------------------- */
+
+.passport-intro {
+margin-bottom: 2.5rem;
+padding-bottom: 1.5rem;
+border-bottom: 2px solid #99CC99;
 }
 
-/* Typography */
-h1 {
-    font-family: 'Noto Serif', Georgia, serif;
-    font-size: 2.5rem;
-    color: #001C26; /* bleu-noir profond */
-    border-bottom: 2px solid #99CC99; /* vert clair */
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+.passport h1 {
+margin: 0;
+padding: 0;
+border: 0;
+color: #001C26;
+font-family: "Noto Serif", Georgia, serif;
+font-size: 2.7rem;
+line-height: 1.15;
+font-weight: 700;
 }
 
-h2 {
-    font-family: 'Noto Serif', Georgia, serif;
-    font-size: 1.8rem;
-    color: #5E5C80; /* Sub-palette purple */
-    margin-top: 2rem;
-    font-weight: 600;
+.passport .scientific-name {
+margin: 0.6rem 0 0;
+color: #5E5C80;
+font-family: "Noto Serif", Georgia, serif;
+font-size: 1.35rem;
 }
 
-h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.4rem;
-    color: #1F4358; /* Sub-palette blue */
-    font-weight: 600;
+.passport .common-names {
+margin: 0.4rem 0 0;
+color: #1F4358;
+font-size: 0.95rem;
 }
 
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5rem 0;
-    background-color: #E5F1E5; /* Light green background */
-    border: 1px solid #689B71; /* Sub-palette green */
+/* ---------------------------------------------------------
+Headings
+--------------------------------------------------------- */
+
+.passport h2 {
+margin: 2.5rem 0 0.9rem;
+color: #5E5C80;
+font-family: "Noto Serif", Georgia, serif;
+font-size: 1.8rem;
+line-height: 1.3;
+font-weight: 600;
 }
 
-th, td {
-    padding: 0.75rem;
-    text-align: left;
-    border: 1px solid #689B71; /* Sub-palette green */
+.passport h3 {
+margin-top: 2rem;
+color: #1F4358;
+font-size: 1.35rem;
+font-weight: 600;
 }
 
-th {
-    background-color: #99CC99; /* vert clair */
-    color: #001C26; /* bleu-noir profond */
-    font-weight: 600;
+/* ---------------------------------------------------------
+Text
+--------------------------------------------------------- */
+
+.passport p {
+margin: 0 0 1rem;
 }
 
-/* Details/Summary Styling */
-details {
-    margin: 1.5rem 0;
-    border: 1px solid #5E5C80; /* Sub-palette purple */
-    border-radius: 4px;
-    padding: 0.5rem;
-    background-color: #F8F9FA; /* Light gray */
+.passport em {
+font-family: "Noto Serif", Georgia, serif;
 }
 
-summary {
-    font-family: 'Noto Serif', Georgia, serif;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 0.5rem;
-    color: #001C26; /* bleu-noir profond */
+.passport strong {
+font-weight: 650;
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1.5rem auto;
-    border: 2px solid #99CC99; /* vert clair */
-    border-radius: 4px;
+/* ---------------------------------------------------------
+Links
+--------------------------------------------------------- */
+
+.passport a {
+color: #E40134;
+font-weight: 600;
+text-decoration: none;
 }
 
-/* Footer */
+.passport a:hover,
+.passport a:focus {
+color: #FF6666;
+text-decoration: underline;
+}
+
+/* ---------------------------------------------------------
+Lists
+--------------------------------------------------------- */
+
+.passport ul,
+.passport ol {
+margin: 0.5rem 0 1.25rem;
+padding-left: 1.5rem;
+}
+
+.passport li {
+margin-bottom: 0.35rem;
+}
+
+/* ---------------------------------------------------------
+Tables
+--------------------------------------------------------- */
+
+.passport table {
+width: 100%;
+margin: 1.25rem 0 2rem;
+border-collapse: collapse;
+background: #E5F1E5;
+border: 1px solid #689B71;
+font-size: 0.95rem;
+}
+
+.passport th,
+.passport td {
+padding: 0.75rem;
+border: 1px solid #689B71;
+text-align: left;
+vertical-align: top;
+}
+
+.passport th {
+background: #99CC99;
+color: #001C26;
+font-weight: 600;
+}
+
+.passport tr:nth-child(even) td {
+background: #F1F7F1;
+}
+
+/* ---------------------------------------------------------
+Taxonomic details
+--------------------------------------------------------- */
+
+.passport details {
+margin: 1.5rem 0 2rem;
+padding: 0;
+border: 1px solid #5E5C80;
+border-radius: 4px;
+background: #F8F9FA;
+}
+
+.passport summary {
+padding: 0.85rem 1rem;
+color: #001C26;
+font-family: "Noto Serif", Georgia, serif;
+font-weight: 600;
+cursor: pointer;
+}
+
+.passport summary:hover {
+background: #F0F1F3;
+}
+
+.passport details > table {
+margin: 0;
+border-width: 1px 0 0;
+}
+
+/* ---------------------------------------------------------
+Images
+--------------------------------------------------------- */
+
+.passport img {
+display: block;
+width: auto;
+max-width: 100%;
+height: auto;
+margin: 1.5rem auto 0.5rem;
+border: 2px solid #99CC99;
+border-radius: 4px;
+}
+
+.passport .image-credit {
+margin-top: 0.5rem;
+color: #5E5C80;
+font-size: 0.85rem;
+font-style: italic;
+text-align: center;
+}
+
+/* ---------------------------------------------------------
+Footer
+--------------------------------------------------------- */
+
 .passport-footer {
-    margin-top: 3rem;
-    padding-top: 1rem;
-    border-top: 2px solid #99CC99; /* vert clair */
-    font-style: italic;
-    text-align: center;
-    color: #5E5C80; /* Sub-palette purple */
-    font-family: 'Noto Serif', Georgia, serif;
+margin-top: 3rem;
+padding-top: 1rem;
+border-top: 2px solid #99CC99;
+color: #5E5C80;
+font-family: "Noto Serif", Georgia, serif;
+font-size: 0.9rem;
+font-style: italic;
+text-align: center;
 }
 
-/* Links */
-a {
-    color: #E40134; /* Rouge Club */
-    text-decoration: none;
-    font-weight: 600;
-}
+/* ---------------------------------------------------------
+Responsive behaviour
+--------------------------------------------------------- */
 
-a:hover {
-    color: #FF6666; /* rouge corail */
-    text-decoration: underline;
-}
-
-/* Key Traits Section */
-.key-traits {
-    background-color: #F8F9FA; /* Light gray */
-    padding: 1rem;
-    border-radius: 4px;
-    border-left: 4px solid #001C26; /* bleu-noir profond */
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
 
-    h1 {
-        font-size: 2rem;
-    }
+```
+.passport {
+    padding: 1.25rem 1rem 2rem;
+}
+
+.passport h1 {
+    font-size: 2.1rem;
+}
+
+.passport h2 {
+    font-size: 1.55rem;
+}
+
+.passport table {
+    font-size: 0.9rem;
+}
+
+.passport th,
+.passport td {
+    padding: 0.55rem;
+}
+```
+
+}
+
+@media (max-width: 520px) {
+
+```
+.passport {
+    padding: 1rem 0.75rem 2rem;
+}
+
+.passport h1 {
+    font-size: 1.8rem;
+}
+
+/*
+ * Allow wide tables to scroll horizontally rather than
+ * forcing the entire page to overflow.
+ */
+.passport table {
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
+}
+```
+
+}
+
+/* ---------------------------------------------------------
+Accessibility
+--------------------------------------------------------- */
+
+.passport a:focus-visible,
+.passport summary:focus-visible {
+outline: 3px solid #E40134;
+outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------
+Reduced motion
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+```
+.passport * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+}
+```
+
 }
