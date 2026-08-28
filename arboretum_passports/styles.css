@@ -1,0 +1,108 @@
+/* Reset and Base Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide GBIF Portal Navigation and Footers */
+.gbif-header,
+.gbif-footer,
+.gbif-sidebar,
+.breadcrumb {
+    display: none !important;
+}
+
+/* Container and Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #34495e;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+
+/* Details/Summary Styling */
+details {
+    margin: 1.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Footer */
+.passport-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-style: italic;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
