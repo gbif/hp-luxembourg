@@ -1,6 +1,6 @@
 ---
 title: "Pedunculate Oak Passport"
-layout: custom
+layout: page
 hide_nav: true
 css: "/arboretum_passports/styles.css"
 ---
