@@ -11,7 +11,7 @@ cta:
   - text: Occurrences
     href: /occurrence/search
     isPrimary: true # this will break as it is illegal yaml
-  - text: Datasets
+  - text: Checklists
     href: /dataset/search
 permalink: /
 ---
