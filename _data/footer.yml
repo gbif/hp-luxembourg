@@ -11,10 +11,8 @@ columns:
       Each column can have a name, an optional description and optional links.
       You can also enable social icons for a column (e.g. for a "Contact" column).
     links:
-    - text: Name of project partner 1
-      href: http://example.com
-    - text: Name of project partner 2
-      href: http://example.com
+    - text: Musée national d'histoire naturelle Luxembourg
+      href: https://mnhn.lu
 
   - name: Code
     description: | # Can be Markdown
@@ -22,7 +20,7 @@ columns:
   
   - name: Contact
     description: | # Can be Markdown
-      Social icons links defined in `_config.yml`
+      Musée national d'histoire naturelle Luxembourg
       * 25 Rue Münster
       * L-2160
       * Luxembourg
