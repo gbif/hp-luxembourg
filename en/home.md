@@ -3,7 +3,7 @@ lang-ref: home
 layout: home
 title: ConservationHub
 description: One-stop platform consolidating all biodiversity and natural heritage conservation information.
-background: /assets/images/placeholders/templates/w1600h800.png
+background: /assets/images/ZPIN.jpg
 imageLicense: None for this image
 height: 70vh
 cta:
