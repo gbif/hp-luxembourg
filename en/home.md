@@ -8,7 +8,7 @@ imageLicense: None for this image
 height: 70vh
 cta:
   - text: Occurrences
-    href: /occurrence/search
+    href: /occurrence/search?view=map
     isPrimary: true # this will break as it is illegal yaml
   - text: Checklists
     href: /dataset/search
