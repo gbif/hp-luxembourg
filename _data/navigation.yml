@@ -14,11 +14,21 @@
     href: /literature/search
 - text: Links
   menu: # Dropdown menu (one level deep only)
-  - text: Musée national d'histoire naturelle
+  - text: National Museum of Natural History Luxembourg
     href: https://mnhn.lu
+  - text: Catalogue of Life
+    href: https://www.catalogueoflife.org
+  - text: ChecklistBank
+    href: https://www.checklistbank.org/
+  - text: GBIF.org
+    href: https://www.gbif.org/
+  - text: National Red List
+    href: https://www.nationalredlist.org/
 - text: Tools
   menu:
   - text: Alerts
     href: https://beta.biodiversiteit.lu
+  - text: mdata.mnhn.lu
+    href: https://mdata.mnhn.lu
 - text: News
   href: /news/

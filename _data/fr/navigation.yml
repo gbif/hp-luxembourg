@@ -4,19 +4,29 @@
   menu:
   - text: Occurrences GBIF
     href: /fr/occurrence/search
-  - text: Jeux de données GBIF
+  - text: Jeux de données GBIF #Datasets
     href: /fr/dataset/search
   # - text: Collections
   #   href: /fr/collection/search
   - text: Littérature GBIF
     href: /fr/literature/search
 - text: Liens
-  menu: # Dropdown menu (one level deep only)
+  menu:
   - text: Musée national d'histoire naturelle Luxembourg
     href: https://mnhn.lu
+  - text: Catalogue of Life
+    href: https://www.catalogueoflife.org
+  - text: ChecklistBank
+    href: https://www.checklistbank.org/
+  - text: GBIF.org
+    href: https://www.gbif.org/
+  - text: Liste rouge nationale
+    href: https://www.nationalredlist.org/
 - text: Outils
   menu:
   - text: Alertes
     href: https://beta.biodiversiteit.lu
+  - text: mdata.mnhn.lu
+    href: https://mdata.mnhn.lu
 - text: Actualités
   href: /fr/news/
