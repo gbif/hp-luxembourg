@@ -10,7 +10,7 @@ cta:
   - text: Occurrences
     href: /fr/occurrence/search?view=map
     isPrimary: true
-  - text: Jeux de données
+  - text: Checklistes
     href: /fr/dataset/search
 permalink: /fr/
 ---
