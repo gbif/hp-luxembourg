@@ -49,7 +49,7 @@ var siteConfig = {
   },
   "theme": {
     "primary": themeStyle.colors.primary,
-    "borderRadius": 3,
+    "borderRadius": themeStyle.square ? 0 : 3,
     "stickyOffset": "0px"
   },
   "maps": {

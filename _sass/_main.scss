@@ -3,3 +3,49 @@
 
 // You can add additional styling here
 @import "_example"; // either as inline css or as a separate file as in this case
+
+// ---------------------------------------------------------------------------
+// MNHN brand identity (aligned with mnhn.lu)
+// Type: Inter (Google Font alternative for the brand's "Area Normal")
+// Colors: #00262a night blue (primary), #f3f3f1 off-white, #7557b1 violet accent
+// Corners: square (set via algae.style.square in _config.yml)
+// ---------------------------------------------------------------------------
+
+// Site-wide typeface: Inter replaces Bulma's default system font stack
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Inter', 'Segoe UI', Candara, Arial, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Segoe UI', Candara, Arial, sans-serif !important;
+  font-weight: 700;
+  letter-spacing: -0.01em; // Inter reads best with slightly tightened headings
+}
+
+// Section backgrounds — MNHN off-white for the features/stats blocks
+// (theme default #edf3f3)
+section.features,
+section.statistics {
+  background: #f3f3f1;
+}
+
+// Secondary accent — MNHN violet, used sparingly: link hover state
+a:hover {
+  color: #7557b1;
+}
+
+// Secondary accent — MNHN violet for the category chips on news cards
+// (the .badge classes are unstyled theme/Bootstrap leftovers)
+a.badge,
+.card-footer .badge {
+  background-color: #7557b1;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35em 0.75em;
+  text-decoration: none;
+}
