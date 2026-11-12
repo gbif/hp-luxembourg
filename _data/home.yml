@@ -3,16 +3,16 @@ stats:
   title: The hub in numbers
   # The numbers fall back to the static values shown here and are replaced live (via data-ajax-url) when the page loads
   features:
-    - title: '<span data-ajax-url="https://api.gbif.org/v1/occurrence/search?country=LU&limit=0">2.4M</span>'
+    - title: '<span data-ajax-url="https://graphql.gbif.org/graphql?query=%7B%20occurrenceSearch(predicate%3A%20%7Btype%3A%20and%2C%20predicates%3A%20%5B%7Btype%3A%20in%2C%20key%3A%20%22publishingOrg%22%2C%20values%3A%20%5B%2275642970-f855-11dd-8235-b8a03c50a862%22%2C%20%2228eb1a3f-1c15-4a95-931a-4af90ecb574d%22%2C%20%22e2e717bf-551a-4917-bdc9-4fa0f342c530%22%2C%20%22c8d737e0-2ff8-42e8-b8fc-6b805d26fc5f%22%2C%20%22b872b075-9ab5-4e27-b6c6-5add6b890379%22%2C%20%22a344ee9f-f1b7-4761-be2c-58ee6d741395%22%2C%20%22bb646dff-a905-4403-a49b-6d378c2cf0d9%22%5D%7D%2C%20%7Btype%3A%20within%2C%20geometry%3A%20%22POLYGON((6.18869%2050.17408%2C%206.07922%2050.19745%2C%205.98539%2050.20412%2C%205.86029%2050.12398%2C%205.78209%2050.02528%2C%205.70912%2049.91129%2C%205.74039%2049.78187%2C%205.85507%2049.66561%2C%205.80295%2049.59301%2C%205.77688%2049.50847%2C%205.96715%2049.42377%2C%206.11571%2049.42377%2C%206.23039%2049.48477%2C%206.40242%2049.43903%2C%206.55359%2049.68922%2C%206.56662%2049.80879%2C%206.25646%2049.95491%2C%206.18869%2050.17408))%22%7D%5D%7D%2C%20size%3A%200)%20%7B%20documents%20%7B%20total%20%7D%20%7D%20%7D" data-ajax-path="data.occurrenceSearch.documents.total">4.18M</span>'
       description: Occurrences in Luxembourg
       background: /assets/images/icons/occurrences.svg
       imageAlt: Map marker icon for occurrences
       href: /occurrence/search
-    - title: '<span data-ajax-url="https://graphql.gbif.org/graphql?query=%7B%20occurrenceSearch(predicate%3A%20%7Btype%3A%20equals%2C%20key%3A%20%22countryCode%22%2C%20value%3A%20%22LU%22%7D%2C%20size%3A%200)%20%7B%20cardinality%20%7B%20speciesKey%20%7D%20%7D%20%7D" data-ajax-path="data.occurrenceSearch.cardinality.speciesKey">20,938</span>'
+    - title: '<span data-ajax-url="https://graphql.gbif.org/graphql?query=%7B%20occurrenceSearch(predicate%3A%20%7Btype%3A%20and%2C%20predicates%3A%20%5B%7Btype%3A%20in%2C%20key%3A%20%22publishingOrg%22%2C%20values%3A%20%5B%2275642970-f855-11dd-8235-b8a03c50a862%22%2C%20%2228eb1a3f-1c15-4a95-931a-4af90ecb574d%22%2C%20%22e2e717bf-551a-4917-bdc9-4fa0f342c530%22%2C%20%22c8d737e0-2ff8-42e8-b8fc-6b805d26fc5f%22%2C%20%22b872b075-9ab5-4e27-b6c6-5add6b890379%22%2C%20%22a344ee9f-f1b7-4761-be2c-58ee6d741395%22%2C%20%22bb646dff-a905-4403-a49b-6d378c2cf0d9%22%5D%7D%2C%20%7Btype%3A%20within%2C%20geometry%3A%20%22POLYGON((6.18869%2050.17408%2C%206.07922%2050.19745%2C%205.98539%2050.20412%2C%205.86029%2050.12398%2C%205.78209%2050.02528%2C%205.70912%2049.91129%2C%205.74039%2049.78187%2C%205.85507%2049.66561%2C%205.80295%2049.59301%2C%205.77688%2049.50847%2C%205.96715%2049.42377%2C%206.11571%2049.42377%2C%206.23039%2049.48477%2C%206.40242%2049.43903%2C%206.55359%2049.68922%2C%206.56662%2049.80879%2C%206.25646%2049.95491%2C%206.18869%2050.17408))%22%7D%5D%7D%2C%20size%3A%200)%20%7B%20cardinality%20%7B%20speciesKey%20%7D%20%7D%20%7D" data-ajax-path="data.occurrenceSearch.cardinality.speciesKey">19,263</span>'
       description: Distinct species recorded
       background: /assets/images/icons/taxa.svg
       imageAlt: Leaf icon for distinct species
-      href: /occurrence/search?view=dashboard&layout=TaxonomicBreakdown_iucn*iucnCounts_taxa
+      href: /occurrence/search?view=dashboard&layout=occurrenceSummary_TaxonomicBreakdown_iucn*iucnCounts_taxa
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?type=CHECKLIST&publishingCountry=LU&limit=0">1</span>'
       description: Checklists published in Luxembourg
       background: /assets/images/icons/checklists.svg
