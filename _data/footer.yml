@@ -13,9 +13,7 @@ columns:
     - text: Musée national d'histoire naturelle Luxembourg
       href: https://mnhn.lu
 
-  - name: Explore
-    description: |
-      Browse the biodiversity data and tools of the portal.
+  - name: Explore biodiversitéit.lu
     links:
     - text: Occurrences
       href: /occurrence/search

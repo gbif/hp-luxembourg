@@ -1,0 +1,31 @@
+# Footer configuration for the French version of the site
+
+columns:
+  - name: Conservation Hub Luxembourg
+    description: |
+      biodiversitéit.lu est le Conservation Hub Luxembourg de la biodiversité du Luxembourg, hébergé par le Musée national d'histoire naturelle (MNHNL).
+      Il rassemble les informations sur les occurrences d'espèces au Luxembourg ainsi que sur les efforts de conservation menés par la communauté nationale.
+    links:
+    - text: Musée national d'histoire naturelle Luxembourg
+      href: https://mnhn.lu
+
+  - name: Explorer biodiversitéit.lu
+    links:
+    - text: Occurrences
+      href: /fr/occurrence/search
+    - text: Jeux de données
+      href: /fr/dataset/search
+    - text: Littérature
+      href: /fr/literature/search
+    - text: Alertes
+      href: https://beta.biodiversiteit.lu
+    - text: Actualités
+      href: /fr/news/
+
+  - name: Contact
+    description: | # Can be Markdown
+      Musée national d'histoire naturelle Luxembourg
+      * 25 Rue Münster
+      * L-2160
+      * Luxembourg
+    connectIcons: true # Show social icons (defined in _config.yml)

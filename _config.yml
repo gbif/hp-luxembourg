@@ -118,14 +118,3 @@ defaults:
       layout: "post"
       permalink: "/fr/post/:year/:slug/"
       lang: fr
-
-  - scope:
-      path: "de/"
-    values:
-      lang: de
-  - scope:
-      path: "_posts/de"
-    values:
-      layout: "post"
-      permalink: "/de/post/:year/:slug/"
-      lang: de

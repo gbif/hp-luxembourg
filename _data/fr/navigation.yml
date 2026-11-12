@@ -1,0 +1,22 @@
+# Navigation configuration for the French version of the site
+
+- text: Données GBIF
+  menu:
+  - text: Occurrences GBIF
+    href: /fr/occurrence/search
+  - text: Jeux de données GBIF
+    href: /fr/dataset/search
+  # - text: Collections
+  #   href: /fr/collection/search
+  - text: Littérature GBIF
+    href: /fr/literature/search
+- text: Liens
+  menu: # Dropdown menu (one level deep only)
+  - text: Musée national d'histoire naturelle Luxembourg
+    href: https://mnhn.lu
+- text: Outils
+  menu:
+  - text: Alertes
+    href: https://beta.biodiversiteit.lu
+- text: Actualités
+  href: /fr/news/

@@ -77,15 +77,15 @@ var siteConfig = {
       "mapTileLocale": "en"
     },
     {
-      "code": "da",
-      "localeCode": "da",
-      "label": "Dansk",
+      "code": "fr",
+      "localeCode": "fr",
+      "label": "Français",
       "default": false,
       "textDirection": "ltr",
-      "iso3LetterCode": "dan",
-      "cmsLocale": "en-GB",
-      "gbifOrgLocalePrefix": "",
-      "mapTileLocale": "en"
+      "iso3LetterCode": "fra",
+      "cmsLocale": "fr",
+      "gbifOrgLocalePrefix": "/fr",
+      "mapTileLocale": "fr"
     }
   ],
   "messages": {},
