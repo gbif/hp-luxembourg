@@ -5,19 +5,29 @@
 
 # Columns (the more you add, the narrower they will be)
 columns:
-  - name: Column example
-    description: | # Can be Markdown and multiline as shown here. 
-      This is an example column. You can add as many as you want.
-      Each column can have a name, an optional description and optional links.
-      You can also enable social icons for a column (e.g. for a "Contact" column).
+  - name: Conservation Hub Luxembourg
+    description: |
+      biodiversitéit.lu is Luxembourg's biodiversity conservation hub, hosted by the Musée national d'histoire naturelle (MNHNL).
+      It gathers information on species occurrences in Luxembourg and on the conservation efforts carried out by the national community.
     links:
     - text: Musée national d'histoire naturelle Luxembourg
       href: https://mnhn.lu
 
-  - name: Code
-    description: | # Can be Markdown
-      See `_data/footer.yml` to customize the footer.
-  
+  - name: Explore
+    description: |
+      Browse the biodiversity data and tools of the portal.
+    links:
+    - text: Occurrences
+      href: /occurrence/search
+    - text: Checklists
+      href: /dataset/search
+    - text: Literature
+      href: /literature/search
+    - text: Alerts
+      href: https://beta.biodiversiteit.lu
+    - text: News
+      href: /news/
+
   - name: Contact
     description: | # Can be Markdown
       Musée national d'histoire naturelle Luxembourg
@@ -25,21 +35,6 @@ columns:
       * L-2160
       * Luxembourg
     connectIcons: true # Show social icons (defined in _config.yml)
-
-
-  # EXAMPLE - just leave this commented out at the bottom of the file for future reference
-  # You can add as many columns as you want
-
-  #columns:
-  #- name: Group name
-  #  description: |
-  #    An optional description. Can be markdown
-  #  links: # optional as well
-  #  - text: link title
-  #    href: http://example.com
-  #  - text: link title 2
-  #    href: http://example2.com
-  #  connectIcons: true # optional - show social icons (defined in _config.yml)
 
 
 # Below is configuration for a small print license statement to add at the bottom of the footer. Can be Markdown
