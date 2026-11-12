@@ -8,9 +8,8 @@ columns:
   - name: Conservation Hub Luxembourg
     description: |
       Luxembourg's biodiversity conservation hub, hosted by the Musée national d'histoire naturelle (MNHNL).
-    links:
-    - text: Musée national d'histoire naturelle Luxembourg
-      href: https://mnhn.lu
+
+      [![Musée national d'histoire naturelle Luxembourg](/assets/logos/Naturmusee_Logo_Nightblue_simple_Small.png){: width="140" style="height:auto"}](https://mnhn.lu)
 
   - name: Explore biodiversitéit.lu
     links:
