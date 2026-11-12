@@ -8,7 +8,7 @@ stats:
       background: /assets/images/placeholders/templates/w1000h600.png
       href: /fr/occurrence/search
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?type=CHECKLIST&publishingCountry=LU&limit=0">1</span>'
-      description: Listes d'espèces publiées via GBIF
+      description: Listes d'espèces publiées au Luxembourg
       background: /assets/images/placeholders/templates/w1000h600.png
       href: /fr/dataset/search
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?publishingCountry=LU&limit=0">7</span>'

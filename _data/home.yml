@@ -8,7 +8,7 @@ stats:
       background: /assets/images/placeholders/templates/w1000h600.png
       href: /occurrence/search
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?type=CHECKLIST&publishingCountry=LU&limit=0">1</span>'
-      description: Checklists published via GBIF
+      description: Checklists published in Luxembourg
       background: /assets/images/placeholders/templates/w1000h600.png
       href: /dataset/search
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?publishingCountry=LU&limit=0">7</span>'
