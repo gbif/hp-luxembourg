@@ -1,1 +1,9 @@
-// You could add something here if you wanted
+// Custom styles for the site
+
+// The navbar logo is allowed more vertical space than the theme/Bulma default (28px / 1.75rem).
+// The logo is vertically long, so a larger height makes it legible without squeezing the width.
+.navbar .navbar-logo_img {
+  height: 3.5rem;
+  max-height: none;
+  width: auto;
+}
