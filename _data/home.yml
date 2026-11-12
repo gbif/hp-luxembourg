@@ -5,15 +5,18 @@ stats:
   features:
     - title: '<span data-ajax-url="https://api.gbif.org/v1/occurrence/search?country=LU&limit=0">2.4M</span>'
       description: Occurrences in Luxembourg
-      background: /assets/images/placeholders/templates/w1000h600.png
+      background: /assets/images/icons/occurrences.svg
+      imageAlt: Map marker icon for occurrences
       href: /occurrence/search
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?type=CHECKLIST&publishingCountry=LU&limit=0">1</span>'
       description: Checklists published in Luxembourg
-      background: /assets/images/placeholders/templates/w1000h600.png
+      background: /assets/images/icons/checklists.svg
+      imageAlt: Checklist icon
       href: /dataset/search
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?publishingCountry=LU&limit=0">7</span>'
-      description: Datasets from Luxembourg publishers
-      background: /assets/images/placeholders/templates/w1000h600.png
+      description: Datasets published by Luxembourg
+      background: /assets/images/icons/datasets.svg
+      imageAlt: Database icon for datasets
       href: /dataset/search
 
 latestPosts:

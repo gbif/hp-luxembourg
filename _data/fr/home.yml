@@ -5,15 +5,18 @@ stats:
   features:
     - title: '<span data-ajax-url="https://api.gbif.org/v1/occurrence/search?country=LU&limit=0">2.4M</span>'
       description: Occurrences au Luxembourg
-      background: /assets/images/placeholders/templates/w1000h600.png
+      background: /assets/images/icons/occurrences.svg
+      imageAlt: Icône marqueur de carte pour les occurrences
       href: /fr/occurrence/search
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?type=CHECKLIST&publishingCountry=LU&limit=0">1</span>'
       description: Listes d'espèces publiées au Luxembourg
-      background: /assets/images/placeholders/templates/w1000h600.png
+      background: /assets/images/icons/checklists.svg
+      imageAlt: Icône liste de contrôle
       href: /fr/dataset/search
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?publishingCountry=LU&limit=0">7</span>'
       description: Jeux de données publiés par le Luxembourg
-      background: /assets/images/placeholders/templates/w1000h600.png
+      background: /assets/images/icons/datasets.svg
+      imageAlt: Icône base de données pour les jeux de données
       href: /fr/dataset/search
 
 latestPosts:
