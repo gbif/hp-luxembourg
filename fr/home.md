@@ -10,9 +10,16 @@ cta:
   - text: Occurrences
     href: /fr/occurrence/search?view=map
     isPrimary: true
-  - text: Checklistes
+  - text: Jeux de données
     href: /fr/dataset/search
 permalink: /fr/
+composition:
+  - type: heroImage
+  - type: pageMarkdown
+  - type: stats
+    data: fr.home.stats
+  - type: latestPosts
+    data: fr.home.latestPosts
 ---
 
 ## Une plateforme unique pour la biodiversité

@@ -1,0 +1,20 @@
+# Data for the home page composition (English)
+stats:
+  title: The hub in numbers
+  # The numbers fall back to the static values shown here and are replaced live (via data-ajax-url) when the page loads
+  features:
+    - title: '<span data-ajax-url="https://api.gbif.org/v1/occurrence/search?country=LU&limit=0">2.4M</span>'
+      description: Occurrences in Luxembourg
+      background: /assets/images/placeholders/templates/w1000h600.png
+      href: /occurrence/search
+    - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?type=CHECKLIST&publishingCountry=LU&limit=0">1</span>'
+      description: Checklists published via GBIF
+      background: /assets/images/placeholders/templates/w1000h600.png
+      href: /dataset/search
+    - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?publishingCountry=LU&limit=0">7</span>'
+      description: Datasets from Luxembourg publishers
+      background: /assets/images/placeholders/templates/w1000h600.png
+      href: /dataset/search
+
+latestPosts:
+  title: Latest news

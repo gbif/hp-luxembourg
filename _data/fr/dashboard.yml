@@ -1,0 +1,12 @@
+# Données pour le tableau de bord de la biodiversité (français)
+luxembourg:
+  id: dashboardLuxembourg
+  title: Occurrences enregistrées au Luxembourg
+  description: |
+    Statistiques en direct générées à partir de toutes les occurrences disponibles via GBIF pour le Luxembourg. Ouvrez un graphique pour explorer les enregistrements correspondants.
+  config:
+    predicate:
+      type: equals
+      key: countryCode
+      value: LU
+    charts: [taxa, year, basisOfRecord, datasetKey]

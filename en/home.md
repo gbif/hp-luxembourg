@@ -13,6 +13,13 @@ cta:
   - text: Checklists
     href: /dataset/search
 permalink: /
+composition:
+  - type: heroImage
+  - type: pageMarkdown
+  - type: stats
+    data: home.stats
+  - type: latestPosts
+    data: home.latestPosts
 ---
 
 ## One platform for biodiversity

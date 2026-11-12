@@ -1,0 +1,34 @@
+# Données pour la composition de la page « À propos » (français)
+# NOTE : les membres de l'équipe ci-dessous sont des profils fictifs pour illustrer les cartes
+team:
+  title: L'équipe
+  description: |
+    Le hub est développé et maintenu par une équipe dédiée au Musée national d'histoire naturelle, en collaboration avec des partenaires de toute la communauté nationale.
+  features:
+    - title: Jane Doe
+      description: Coordinatrice du hub — assure la liaison avec les partenaires nationaux et coordonne les activités du hub. *(profil fictif)*
+      background: /assets/images/placeholders/templates/w1000h600.png
+    - title: John Doe
+      description: Gestionnaire des données sur la biodiversité — responsable de l'agrégation des occurrences et des listes d'espèces. *(profil fictif)*
+      background: /assets/images/placeholders/templates/w1000h600.png
+    - title: Jeanne Dupont
+      description: Biologiste de la conservation — assure le suivi des contenus sur la conservation et des dossiers d'espèces. *(profil fictif)*
+      background: /assets/images/placeholders/templates/w1000h600.png
+
+partners:
+  title: Partenaires
+  description: |
+    Le hub est hébergé par le MNHN et s'appuie sur l'infrastructure du réseau GBIF.
+  features:
+    - title: Musée national d'histoire naturelle Luxembourg
+      description: Institution hôte du hub de conservation.
+      background: /assets/logos/Naturmusee_Logo_negative_simple_Small.png
+      href: https://mnhn.lu
+    - title: GBIF.org
+      description: Infrastructure mondiale de données sur la biodiversité alimentant les widgets du portail.
+      background: /assets/images/placeholders/templates/w1000h600.png
+      href: https://www.gbif.org/
+    - title: mdata.mnhn.lu
+      description: Dépôt de données de recherche du MNHN.
+      background: /assets/images/placeholders/templates/w1000h600.png
+      href: https://mdata.mnhn.lu

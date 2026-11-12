@@ -12,6 +12,8 @@
   #   href: /collection/search
   - text: GBIF Literature
     href: /literature/search
+  - text: Biodiversity dashboard
+    href: /dashboard/
 - text: Links
   menu: # Dropdown menu (one level deep only)
   - text: National Museum of Natural History Luxembourg
@@ -32,3 +34,5 @@
     href: https://mdata.mnhn.lu
 - text: News
   href: /news/
+- text: About
+  href: /about/

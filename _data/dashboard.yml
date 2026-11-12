@@ -1,0 +1,12 @@
+# Data for the biodiversity dashboard block (English)
+luxembourg:
+  id: dashboardLuxembourg
+  title: Occurrences recorded in Luxembourg
+  description: |
+    Live statistics generated from all occurrence records available through GBIF for Luxembourg. Open a chart to explore the underlying records.
+  config:
+    predicate:
+      type: equals
+      key: countryCode
+      value: LU
+    charts: [taxa, year, basisOfRecord, datasetKey]
