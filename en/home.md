@@ -15,6 +15,8 @@ cta:
 permalink: /
 ---
 
-Edit `/home.md` to change the text.
+## One platform for biodiversity
 
-One-stop platform consolidating all biodiversity and natural heritage conservation information.
+**ConservationHub** brings together on a single platform all information on biodiversity and natural heritage conservation in Luxembourg: it aggregates previously isolated sources of information and makes new documents — until now barely accessible to the public — openly available. Biodiversity loss is not only a loss of natural heritage, but also a profound loss of cultural heritage — and a threat to the economy.
+
+Led by the Naturmusée, the platform structures conservation activities and information, and acts as a catalyst for interoperability and networking between all national actors.

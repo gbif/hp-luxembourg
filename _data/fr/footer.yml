@@ -3,8 +3,7 @@
 columns:
   - name: Conservation Hub Luxembourg
     description: |
-      biodiversitéit.lu est le Conservation Hub Luxembourg de la biodiversité du Luxembourg, hébergé par le Musée national d'histoire naturelle (MNHNL).
-      Il rassemble les informations sur les occurrences d'espèces au Luxembourg ainsi que sur les efforts de conservation menés par la communauté nationale.
+      Le hub de conservation de la biodiversité du Luxembourg, hébergé par le Musée national d'histoire naturelle (MNHNL).
     links:
     - text: Musée national d'histoire naturelle Luxembourg
       href: https://mnhn.lu
