@@ -1,0 +1,118 @@
+{% if page.lang-ref%}
+  {% assign posts = site.posts | where: "lang-ref", page.lang-ref | sort: 'lang' %}
+  {% if posts.size == 0 %}
+      {% assign posts=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+  {% endif %}
+  {% if posts.size > 1 %}
+
+  <div class="navbar-end">
+    <div class="navbar-item has-dropdown js-language-dropdown">
+      <div class="buttons language-selector">
+        <a class="button is-light js-language-trigger"
+           role="button"
+           tabindex="0"
+           aria-haspopup="true"
+           aria-expanded="false"
+           aria-controls="language-selector-menu"
+           aria-label="{{ site.data.translations['languageSelector'][page.lang] | default: 'Language selector' }}">
+          <span>{{ site.data.languages[page.lang].label }}</span>
+          <span class="icon is-small" aria-hidden="true">
+            <i class="fa fa-language"></i>
+          </span>
+        </a>
+
+        <ul id="language-selector-menu" class="navbar-dropdown is-right" role="menu">
+          {% for post in posts %}
+          <li role="none">
+            <a class="navbar-item js-language-option" role="menuitem" data-locale="{{post.lang}}" href="{{ site.base-url }}{{ post.url }}"{% if post.lang == page.lang %} aria-current="page"{% endif %}>
+              {% if site.data.languages[post.lang].icon %}
+              <img src="{{ site.data.languages[post.lang].icon }}" style="margin-right: 6px; height:1em;" aria-hidden="true" />
+              {% endif %}
+              {{ site.data.languages[post.lang].label }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var dropdown = document.querySelector('.js-language-dropdown');
+      var trigger = document.querySelector('.js-language-trigger');
+      if (!dropdown || !trigger) return;
+
+      function open() {
+        dropdown.classList.add('is-active');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+
+      function close() {
+        dropdown.classList.remove('is-active');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+
+      function toggle() {
+        dropdown.classList.contains('is-active') ? close() : open();
+      }
+
+      trigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggle();
+      });
+
+      trigger.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+        if (e.key === 'Escape') {
+          close();
+        }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!dropdown.contains(e.target)) {
+          close();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && dropdown.classList.contains('is-active')) {
+          close();
+          trigger.focus();
+        }
+      });
+    })();
+  </script>
+    {% if site.updateTranslationMenuOnWidgetEvents %}
+    <script>
+      // notice that this will only work if the site is using the same urls for all languages (with a locale prefix)
+      const options = document.querySelectorAll('.js-language-option');
+
+      // Embedded widgets that do not mirror the page url in their router (e.g. the dashboard
+      // block, which reports a synthetic "/" or "/<locale>" path) must not overwrite the
+      // language menu. Only update the links when the widget url matches the current page.
+      const nonDefaultLocales = [{% for lang in site.data.languages %}{% unless lang[0] == site.algae.rootLang %}'{{ lang[0] }}', {% endunless %}{% endfor %}].filter(Boolean);
+
+      function normalizePath(p) {
+        let path = (p || '').split('?')[0].split('#')[0];
+        for (const locale of nonDefaultLocales) {
+          if (path === '/' + locale) return '/';
+          if (path.startsWith('/' + locale + '/')) return path.slice(locale.length + 1);
+        }
+        return path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
+      }
+
+      window.addEventListener('gbifUrlChange', e => {
+        const { url, localizeLink } = e.detail;
+        if (normalizePath(url) !== normalizePath(window.location.pathname)) return; // keep the static links
+        options.forEach(option => {
+          const locale = option.getAttribute('data-locale');
+          option.setAttribute('href', localizeLink(url, locale));
+        })
+      })
+    </script>
+    {% endif %}
+  {% endif %}
+{% endif %}
