@@ -8,11 +8,11 @@ stats:
       background: /assets/images/icons/occurrences.svg
       imageAlt: Icône marqueur de carte pour les occurrences
       href: /fr/occurrence/search
-    - title: '<span data-ajax-url="https://graphql.gbif.org/graphql?query=%7B%20occurrenceSearch(predicate%3A%20%7Btype%3A%20equals%2C%20key%3A%20%22countryCode%22%2C%20value%3A%20%22LU%22%7D%2C%20size%3A%200)%20%7B%20cardinality%20%7B%20taxonKey%20%7D%20%7D%20%7D" data-ajax-path="data.occurrenceSearch.cardinality.taxonKey">40,121</span>'
-      description: Taxons distincts enregistrés
+    - title: '<span data-ajax-url="https://graphql.gbif.org/graphql?query=%7B%20occurrenceSearch(predicate%3A%20%7Btype%3A%20equals%2C%20key%3A%20%22countryCode%22%2C%20value%3A%20%22LU%22%7D%2C%20size%3A%200)%20%7B%20cardinality%20%7B%20speciesKey%20%7D%20%7D%20%7D" data-ajax-path="data.occurrenceSearch.cardinality.speciesKey">20,938</span>'
+      description: Espèces distinctes enregistrées
       background: /assets/images/icons/taxa.svg
-      imageAlt: Icône feuille pour les taxons distincts
-      href: /fr/occurrence/search
+      imageAlt: Icône feuille pour les espèces distinctes
+      href: /fr/occurrence/search?view=dashboard&layout=TaxonomicBreakdown_iucn*iucnCounts_taxa
     - title: '<span data-ajax-url="https://api.gbif.org/v1/dataset/search?type=CHECKLIST&publishingCountry=LU&limit=0">1</span>'
       description: Listes d'espèces publiées au Luxembourg
       background: /assets/images/icons/checklists.svg
