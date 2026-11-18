@@ -59,8 +59,59 @@ var siteConfig = {
       "options": {
         "MERCATOR": [
           "BRIGHT",
-          "NATURAL"
+          "NATURAL",
+          "LUX_BASEMAP",
+          "LUX_TOPO",
+          "LUX_HYBRID",
+          "LUX_ORTHO"
         ]
+      }
+    },
+    // Additional map layers from Luxembourg's geoportail.lu (open data WMTS, CC0)
+    // See https://data.public.lu/en/datasets/carte-de-base-webservices-wms-et-wmts/
+    "styleLookup": {
+      "MERCATOR": {
+        "LUX_BASEMAP": "LUX_BASEMAP",
+        "LUX_TOPO": "LUX_TOPO",
+        "LUX_HYBRID": "LUX_HYBRID",
+        "LUX_ORTHO": "LUX_ORTHO"
+      }
+    },
+    "addMapStyles": function ({ mapStyleServer, language, pixelRatio, apiKeys, mapComponents }) {
+      var mapComponent = mapComponents.MapLibreMap || mapComponents.OpenlayersMap;
+      return {
+        LUX_BASEMAP: {
+          component: mapComponent,
+          labelKey: 'mapLayernames.luxBasemap',
+          mapConfig: {
+            basemapStyle: '/assets/maps/geoportail-basemap.json',
+            projection: 'EPSG_3857'
+          }
+        },
+        LUX_TOPO: {
+          component: mapComponent,
+          labelKey: 'mapLayernames.luxTopomap',
+          mapConfig: {
+            basemapStyle: '/assets/maps/geoportail-topomap.json',
+            projection: 'EPSG_3857'
+          }
+        },
+        LUX_HYBRID: {
+          component: mapComponent,
+          labelKey: 'mapLayernames.luxHybrid',
+          mapConfig: {
+            basemapStyle: '/assets/maps/geoportail-hybrid.json',
+            projection: 'EPSG_3857'
+          }
+        },
+        LUX_ORTHO: {
+          component: mapComponent,
+          labelKey: 'mapLayernames.luxOrtho',
+          mapConfig: {
+            basemapStyle: '/assets/maps/geoportail-ortho.json',
+            projection: 'EPSG_3857'
+          }
+        }
       }
     }
   },
@@ -88,7 +139,21 @@ var siteConfig = {
       "mapTileLocale": "fr"
     }
   ],
-  "messages": {},
+  "messages": {
+    "en": {
+      "mapLayernames.luxBasemap": "Geoportail.lu basemap",
+      "mapLayernames.luxTopomap": "Geoportail.lu topographic map",
+      "mapLayernames.luxHybrid": "Geoportail.lu hybrid (ortho + labels)",
+      "mapLayernames.luxOrtho": "Geoportail.lu orthophoto"
+    },
+    "fr": {
+      "mapLayernames.luxBasemap": "Carte de base geoportail.lu",
+      "mapLayernames.luxTopomap": "Carte topographique geoportail.lu",
+      "mapLayernames.luxHybrid": "Carte hybride geoportail.lu",
+      "mapLayernames.luxOrtho": "Orthophoto geoportail.lu"
+    }
+  },
+
   "occurrenceSearch": {
     "scope": {
       "type": "and",

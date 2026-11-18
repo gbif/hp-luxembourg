@@ -1,0 +1,33 @@
+{
+  "version": 8,
+  "name": "geoportail-basemap",
+  "metadata": {
+    "gb:reproject": true
+  },
+  "sources": {
+    "geoportail": {
+      "type": "raster",
+      "tiles": [
+        "https://wmts1.geoportail.lu/opendata/wmts/basemap/GLOBAL_WEBMERCATOR/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 19,
+      "attribution": "<a href=\"https://data.public.lu/en/datasets/carte-de-base-webservices-wms-et-wmts/\">Carte de base Geoportail.lu</a> &copy; Administration du cadastre et de la topographie (CC0)"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#d8d8d4"
+      }
+    },
+    {
+      "id": "geoportail-basemap",
+      "type": "raster",
+      "source": "geoportail"
+    }
+  ]
+}
