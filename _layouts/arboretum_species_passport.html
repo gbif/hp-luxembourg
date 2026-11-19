@@ -1,0 +1,105 @@
+---
+# Shared layout for all arboretum species passport pages.
+# One page per row of _data/arboretum_species.tsv is generated per locale by
+# _plugins/generate_arboretum_species.rb, which provides:
+#   page.species        -> the TSV row (hash)
+#   page.lang           -> locale of this page (en / fr)
+#   page.species_jsonld -> pre-escaped schema.org JSON-LD string
+layout: base
+---
+{% assign sp = page.species %}
+{% assign lang = page.lang | default: "en" %}
+{% assign root_lang = site.algae.rootLang | default: "en" %}
+{% if lang == root_lang %}{% assign prefix = "" %}{% else %}{% assign prefix = "/" | append: lang %}{% endif %}
+
+{% comment %}Locale-appropriate text columns, falling back to English with a note.{% endcomment %}
+{% if lang == "fr" %}
+  {% assign description = sp.description_fr %}
+  {% assign characteristics = sp.characteristics_fr %}
+  {% assign good_to_know = sp.good_to_know_fr %}
+{% else %}
+  {% assign description = sp.description_en %}
+  {% assign characteristics = sp.characteristics_en %}
+  {% assign good_to_know = sp.good_to_know_en %}
+{% endif %}
+{% assign untranslated = false %}
+{% if description == nil or description == empty %}{% assign description = sp.description_en %}{% assign untranslated = true %}{% endif %}
+{% if characteristics == nil or characteristics == empty %}{% assign characteristics = sp.characteristics_en %}{% assign untranslated = true %}{% endif %}
+{% if good_to_know == nil or good_to_know == empty %}{% assign good_to_know = sp.good_to_know_en %}{% assign untranslated = true %}{% endif %}
+
+{% if lang == "fr" %}
+  {% assign label_description = "Description" %}
+  {% assign label_characteristics = "Caractéristiques" %}
+  {% assign label_good_to_know = "Bon à savoir" %}
+  {% assign label_gbif = "Voir sur GBIF" %}
+  {% assign label_map = "Carte des occurrences (GBIF)" %}
+  {% assign label_untranslated = "Pas encore traduit — texte affiché en anglais." %}
+  {% assign label_common_names = "Noms communs" %}
+{% else %}
+  {% assign label_description = "Description" %}
+  {% assign label_characteristics = "Characteristics" %}
+  {% assign label_good_to_know = "Good to know" %}
+  {% assign label_gbif = "View on GBIF" %}
+  {% assign label_map = "Occurrence map (GBIF)" %}
+  {% assign label_untranslated = "Not yet translated." %}
+  {% assign label_common_names = "Common names" %}
+{% endif %}
+
+{{ page.species_jsonld }}
+
+<section class="section arboretum-passport">
+  <div class="container">
+
+    {% if sp.image_file %}
+    <figure class="arboretum-passport__hero">
+      <img src="{{ site.baseurl }}/assets/images/arboretum-species/{{ sp.image_file }}" alt="{{ sp.scientific_name }}" />
+      {% if sp.image_credit %}<figcaption class="arboretum-passport__credit">{{ sp.image_credit }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+
+    <h1 class="title"><em>{{ sp.scientific_name }}</em> {{ sp.scientific_name_authorship }}</h1>
+
+    <div class="arboretum-passport__names">
+      <h2 class="subtitle is-6">{{ label_common_names }}</h2>
+      <ul class="arboretum-passport__namelist">
+        {% if sp.common_name_en %}<li><span class="arboretum-passport__lang">EN</span> {{ sp.common_name_en }}</li>{% endif %}
+        {% if sp.common_name_fr %}<li><span class="arboretum-passport__lang">FR</span> {{ sp.common_name_fr }}</li>{% endif %}
+        {% if sp.common_name_lb %}<li><span class="arboretum-passport__lang">LB</span> {{ sp.common_name_lb }}</li>{% endif %}
+        {% if sp.common_name_de %}<li><span class="arboretum-passport__lang">DE</span> {{ sp.common_name_de }}</li>{% endif %}
+      </ul>
+    </div>
+
+    <p>
+      <a class="button is-primary is-outlined" href="https://www.gbif.org/species/{{ sp.COL_taxon_id }}" target="_blank" rel="noopener">
+        {{ label_gbif }} (gbif.org/species/{{ sp.COL_taxon_id }})
+      </a>
+    </p>
+
+    <section class="arboretum-passport__section">
+      <h2 class="title is-4">{{ label_description }}</h2>
+      {% if untranslated %}<p class="arboretum-passport__untranslated"><em>{{ label_untranslated }}</em></p>{% endif %}
+      <p>{{ description }}</p>
+    </section>
+
+    <section class="arboretum-passport__section">
+      <h2 class="title is-4">{{ label_characteristics }}</h2>
+      <p>{{ characteristics }}</p>
+    </section>
+
+    <section class="arboretum-passport__section">
+      <h2 class="title is-4">{{ label_good_to_know }}</h2>
+      <p>{{ good_to_know }}</p>
+    </section>
+
+    <section class="arboretum-passport__section">
+      <h2 class="title is-4">{{ label_map }}</h2>
+      <iframe
+        class="arboretum-passport__map"
+        src="{{ prefix }}/occurrence/search?view=map&amp;taxonKey={{ sp.COL_taxon_id }}"
+        title="{{ label_map }} — {{ sp.scientific_name }}"
+        loading="lazy"
+        style="width: 100%; height: 420px; border: 1px solid #dbdbdb; border-radius: 4px;"></iframe>
+    </section>
+
+  </div>
+</section>

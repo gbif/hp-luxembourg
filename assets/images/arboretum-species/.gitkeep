@@ -1,0 +1,3 @@
+# Local images for arboretum species passports.
+# Each row of _data/arboretum_species.tsv references its image here via the
+# image_file column (filename only, e.g. quercus_robur.jpg).

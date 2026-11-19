@@ -1,0 +1,41 @@
+---
+# Page d'atterrissage listant tous les passeports d'espèces de l'arboretum (français).
+# Les pages passeport sont générées depuis _data/arboretum_species.tsv par
+# _plugins/generate_arboretum_species.rb sous /fr/arboretum-species/{slug}/.
+layout: base
+title: Espèces de l'arboretum
+description: Passeports d'espèces de l'arboretum — une page par espèce, générée à partir du fichier de données central
+lang-ref: arboretum-species
+permalink: /fr/arboretum-species/
+---
+{% assign root_lang = site.algae.rootLang | default: "en" %}
+{% if page.lang == root_lang %}{% assign prefix = "" %}{% else %}{% assign prefix = "/" | append: page.lang %}{% endif %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">{{ page.title }}</h1>
+    <p class="subtitle">{{ page.description }}</p>
+
+    <div class="columns is-multiline">
+      {% for sp in site.data.arboretum_species %}
+      <div class="column is-one-third">
+        <a class="card" href="{{ prefix }}/arboretum-species/{{ sp.slug }}/">
+          {% if sp.image_file %}
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="{{ site.baseurl }}/assets/images/arboretum-species/{{ sp.image_file }}" alt="{{ sp.scientific_name }}" loading="lazy" />
+            </figure>
+          </div>
+          {% endif %}
+          <div class="card-content">
+            <p class="title is-5"><em>{{ sp.scientific_name }}</em> {{ sp.scientific_name_authorship }}</p>
+            <p class="subtitle is-6">
+              {% if page.lang == "fr" and sp.common_name_fr %}{{ sp.common_name_fr }}{% else %}{{ sp.common_name_en }}{% endif %}
+            </p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
