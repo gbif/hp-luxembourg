@@ -7,6 +7,7 @@
 #   page.species_jsonld -> pre-escaped schema.org JSON-LD string
 layout: base
 ---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/arboretum-species.css" />
 {% assign sp = page.species %}
 {% assign lang = page.lang | default: "en" %}
 
@@ -32,6 +33,12 @@ layout: base
   {% assign label_gbif = "Voir sur GBIF" %}
   {% assign label_untranslated = "Pas encore traduit — texte affiché en anglais." %}
   {% assign label_common_names = "Noms communs" %}
+  {% assign label_taxonomy = "Classification taxonomique" %}
+  {% assign label_kingdom = "Règne" %}
+  {% assign label_order = "Ordre" %}
+  {% assign label_family = "Famille" %}
+  {% assign label_genus = "Genre" %}
+  {% assign label_species = "Espèce" %}
 {% else %}
   {% assign label_description = "Description" %}
   {% assign label_characteristics = "Characteristics" %}
@@ -39,6 +46,12 @@ layout: base
   {% assign label_gbif = "View on GBIF" %}
   {% assign label_untranslated = "Not yet translated." %}
   {% assign label_common_names = "Common names" %}
+  {% assign label_taxonomy = "Taxonomic classification" %}
+  {% assign label_kingdom = "Kingdom" %}
+  {% assign label_order = "Order" %}
+  {% assign label_family = "Family" %}
+  {% assign label_genus = "Genus" %}
+  {% assign label_species = "Species" %}
 {% endif %}
 
 {{ page.species_jsonld }}
@@ -46,30 +59,46 @@ layout: base
 <section class="section arboretum-passport">
   <div class="container">
 
-    {% if sp.image_file %}
-    <figure class="arboretum-passport__hero">
-      <img src="{{ site.baseurl }}/assets/images/arboretum-species/{{ sp.image_file }}" alt="{{ sp.scientific_name }}" />
-      {% if sp.image_credit %}<figcaption class="arboretum-passport__credit">{{ sp.image_credit }}</figcaption>{% endif %}
-    </figure>
-    {% endif %}
+    <div class="arboretum-passport__header">
+      {% if sp.image_file %}
+      <figure class="arboretum-passport__hero">
+        <img src="{{ site.baseurl }}/assets/images/arboretum-species/{{ sp.image_file }}" alt="{{ sp.scientific_name }}" />
+        {% if sp.image_credit %}<figcaption class="arboretum-passport__credit">{{ sp.image_credit }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+      <div class="arboretum-passport__intro">
+        <h1 class="title"><em>{{ sp.scientific_name }}</em> {{ sp.scientific_name_authorship }}</h1>
 
-    <h1 class="title"><em>{{ sp.scientific_name }}</em> {{ sp.scientific_name_authorship }}</h1>
+        <div class="arboretum-passport__names">
+          <h2 class="subtitle is-6">{{ label_common_names }}</h2>
+          <ul class="arboretum-passport__namelist">
+            {% if sp.common_name_en %}<li><span class="arboretum-passport__lang">🇬🇧 EN</span> {{ sp.common_name_en }}</li>{% endif %}
+            {% if sp.common_name_fr %}<li><span class="arboretum-passport__lang">🇫🇷 FR</span> {{ sp.common_name_fr }}</li>{% endif %}
+            {% if sp.common_name_lb %}<li><span class="arboretum-passport__lang">🇱🇺 LB</span> {{ sp.common_name_lb }}</li>{% endif %}
+            {% if sp.common_name_de %}<li><span class="arboretum-passport__lang">🇩🇪 DE</span> {{ sp.common_name_de }}</li>{% endif %}
+          </ul>
+        </div>
 
-    <div class="arboretum-passport__names">
-      <h2 class="subtitle is-6">{{ label_common_names }}</h2>
-      <ul class="arboretum-passport__namelist">
-        {% if sp.common_name_en %}<li><span class="arboretum-passport__lang">EN</span> {{ sp.common_name_en }}</li>{% endif %}
-        {% if sp.common_name_fr %}<li><span class="arboretum-passport__lang">FR</span> {{ sp.common_name_fr }}</li>{% endif %}
-        {% if sp.common_name_lb %}<li><span class="arboretum-passport__lang">LB</span> {{ sp.common_name_lb }}</li>{% endif %}
-        {% if sp.common_name_de %}<li><span class="arboretum-passport__lang">DE</span> {{ sp.common_name_de }}</li>{% endif %}
-      </ul>
+        <p>
+          <a class="button is-primary is-outlined" href="https://www.gbif.org/taxon/{{ sp.COL_taxon_id }}" target="_blank" rel="noopener">
+            {{ label_gbif }}
+          </a>
+        </p>
+
+        {% if sp.kingdom %}
+        <details class="arboretum-passport__taxonomy">
+          <summary>{{ label_taxonomy }}</summary>
+          <ul class="arboretum-passport__taxlist">
+            <li><span class="arboretum-passport__rank">{{ label_kingdom }}</span> {{ sp.kingdom }}</li>
+            <li><span class="arboretum-passport__rank">{{ label_order }}</span> {{ sp.order }}</li>
+            <li><span class="arboretum-passport__rank">{{ label_family }}</span> {{ sp.family }}</li>
+            <li><span class="arboretum-passport__rank">{{ label_genus }}</span> <em>{{ sp.genus }}</em></li>
+            <li><span class="arboretum-passport__rank">{{ label_species }}</span> <em>{{ sp.scientific_name }}</em></li>
+          </ul>
+        </details>
+        {% endif %}
+      </div>
     </div>
-
-    <p>
-      <a class="button is-primary is-outlined" href="https://www.gbif.org/species/{{ sp.COL_taxon_id }}" target="_blank" rel="noopener">
-        {{ label_gbif }} (gbif.org/species/{{ sp.COL_taxon_id }})
-      </a>
-    </p>
 
     <section class="arboretum-passport__section">
       <h2 class="title is-4">{{ label_description }}</h2>

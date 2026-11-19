@@ -1,0 +1,97 @@
+/* Arboretum species passports — scoped to .arboretum-passport
+   Brand: #00262a night blue, #f3f3f1 off-white, #7557b1 violet, square corners */
+
+.arboretum-passport__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.arboretum-passport__hero {
+  flex: 0 1 360px;
+  margin: 0;
+}
+
+.arboretum-passport__hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 12px rgba(0, 38, 42, 0.18);
+}
+
+.arboretum-passport__credit {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: #f3f3f1;
+  color: #555;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.arboretum-passport__intro {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.arboretum-passport__namelist {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.arboretum-passport__namelist li {
+  margin-bottom: 0.35rem;
+}
+
+.arboretum-passport__lang {
+  display: inline-block;
+  min-width: 3.4em;
+  margin-right: 0.6em;
+  padding: 0.1em 0.45em;
+  background: #00262a;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.arboretum-passport__taxonomy {
+  margin-top: 1rem;
+  padding: 0.9rem 1.1rem;
+  background: #f3f3f1;
+}
+
+.arboretum-passport__taxonomy summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.arboretum-passport__taxlist {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+}
+
+.arboretum-passport__taxlist li {
+  padding: 0.15rem 0;
+}
+
+.arboretum-passport__rank {
+  display: inline-block;
+  min-width: 6.5em;
+  font-weight: 600;
+  color: #00262a;
+}
+
+.arboretum-passport__section {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid #7557b1;
+}
+
+.arboretum-passport__untranslated {
+  color: #777;
+  font-size: 0.85rem;
+}

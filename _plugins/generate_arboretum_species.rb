@@ -110,9 +110,9 @@ module Jekyll
             "row #{row_number}: skipped — duplicate slug #{slug.inspect} (first used on row #{seen_slugs[slug]})"
           next
         end
-        if row["COL_taxon_id"].nil? || row["COL_taxon_id"] !~ /\A\d+\z/
+        if row["COL_taxon_id"].nil? || row["COL_taxon_id"] !~ /\A[A-Za-z0-9]+\z/
           Jekyll.logger.warn "ArboretumSpecies:",
-            "row #{row_number} (#{slug}): skipped — COL_taxon_id must be a GBIF backbone key (integer), got #{row['COL_taxon_id'].inspect}"
+            "row #{row_number} (#{slug}): skipped — COL_taxon_id must be a GBIF/COL taxon key (alphanumeric), got #{row['COL_taxon_id'].inspect}"
           next
         end
         if row["scientific_name"].nil?
@@ -140,8 +140,8 @@ module Jekyll
         "author"      => row["scientific_name_authorship"],
         "taxonRank"   => "species",
         "identifier"  => row["COL_taxon_id"],
-        "url"         => "https://www.gbif.org/species/#{row['COL_taxon_id']}",
-        "sameAs"      => "https://www.gbif.org/species/#{row['COL_taxon_id']}",
+        "url"         => "https://www.gbif.org/taxon/#{row['COL_taxon_id']}",
+        "sameAs"      => "https://www.gbif.org/taxon/#{row['COL_taxon_id']}",
         "alternateName" => common_names,
       }
       key = locale == "fr" ? "description_fr" : "description_en"
