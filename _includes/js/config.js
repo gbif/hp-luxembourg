@@ -5,6 +5,8 @@ You probably want to check out the documentation at https://hp-theme.gbif-stagin
 */
 var siteConfig = {
   "version": 3,
+  "defaultChecklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b", // Catalogue of Life
+  "availableChecklistKeys": ["7ddf754f-d193-4cc9-b351-99906754a03b"], // the classification shown on occurrence pages
   "pages": [ // which pages do we want to enable
     {
       "id": "occurrenceSearch"
